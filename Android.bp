@@ -1,0 +1,19 @@
+cc_library_headers {
+    name: "libboost_intrusive",
+    vendor_available: true,
+    export_include_dirs: ["include"],
+    target: {
+        android: {
+            cflags: [
+                "-fPIC",
+                "-DPIC",
+            ],
+        },
+        not_windows: {
+            cflags: [
+                "-fPIC",
+                "-DPIC",
+            ],
+         },
+    },
+}
